@@ -1,17 +1,22 @@
 <script lang="ts" setup>
-defineProps<{
-  name: string
-  description: string
-  level: 'easy' | 'normal' | 'hard'
-}>()
+import type { ExerciseSummary } from '~/shared/types/workout'
+
+defineProps<ExerciseSummary>()
 </script>
 <template>
   <div class="workout-card">
     <p>
       <strong>{{ name }}</strong>
+
+      <NuxtLink
+        :to="{
+          name: 'exercises-id',
+          params: { id },
+        }"
+      >
+        Zobacz szczegóły
+      </NuxtLink>
     </p>
-    <p>{{ description }}</p>
-    <p>{{ level }}</p>
   </div>
 </template>
 <style lang="css" scoped>

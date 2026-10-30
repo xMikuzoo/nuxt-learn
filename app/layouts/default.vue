@@ -3,8 +3,8 @@
     <header>
       <p>nuxt-learn</p>
       <nav>
-        <a href="/">strona glonwna</a>
-        <a href="/druga-strona">druga-strona</a>
+        <NuxtLink to="/">strona glonwna</NuxtLink>
+        <NuxtLink to="/druga-strona">druga-strona</NuxtLink>
       </nav>
       <p>lol</p>
     </header>
